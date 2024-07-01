@@ -1,0 +1,178 @@
+/* cette ligne indique qu'on veut télécharger une police ailleurs */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* la 1er argument est pour utiliser la police Arial, le 2eme argument est un défaut : si on ne peut pas obtenir la police oswald, on veut la police sans-serif par défaut de l'ordinateur sur lequel on charge le site */
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+    font-size: 1em;
+}
+
+/* la 1er argument est pour utiliser la police oswald, le 2eme argument est un défaut : si on ne peut pas obtenir la police oswald, on veut la police sans-serif par défaut de l'ordinateur sur lequel on charge le site */
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    /* 16px de marge en haut et en bas des ttres, 0 à droite et à gauche */
+    margin: 16px 0;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: darkred;
+}
+
+#container {
+    width: 800px;
+    /* Juste pour la démo : le pourcentage est une unité relative au parent */
+    /* width: 70%; */
+    margin: 16px auto;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#header {
+    /* border: 1px solid black; */
+    /* width: 50%; */
+}
+
+#main-title {
+    /* font-size: 48px; */
+    /* L'unité de mesure em est relative : elle s'adapte au pixel de l'écran, et elle s'adapte à la taille du parent */
+    font-size: 3em;
+    /* font-size: 16px; */
+    /* color darked en version hex */
+    /* border-top: 2px solid #8b0000; */
+    border-bottom: 2px solid darkred;
+    border-top: 2px solid darkred;
+    padding: 16px 0;
+}
+
+#sub-title {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    /* padding 8px et haut et en bas, 16px à droite et à gauche */
+    padding: 8px 16px;
+}
+
+#main-content {
+    margin: 10px 0;
+}
+
+#presentation {
+    background-color: #eee;
+    width: 600px;
+    margin-inline: auto;
+    padding: 20px;
+    line-height: 1.3;
+}
+
+#presentation-header {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+#presentation img {
+    width: 100px;
+    margin: 1em 0;
+}
+
+.texte-courant {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+#presentation-aside {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.texte-courant strong {
+    font-weight: bold;
+}
+
+#liste-acteurs {
+}
+
+#actors {
+    width: 600px;
+    margin-inline: auto;
+}
+
+#actors li {
+    background-color: #eee;
+    margin: 0.3em;
+    color: darkred;
+    /* arrondir les angles */
+    border-radius: 1em;
+}
+
+#actors li a {
+    font-size: 0.8em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    /* On passe les liens en block afin qu'ils prennent toute la largeur du conteneur (li), pour faire en sorte de pouvoir appliquer du padding, et aussi pour rendre service à l'utilisateur : il pourra cliquer plus facilement les liens */
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    transition: all 150ms;
+}
+
+/* Le hover est une pseudo classe : il représente la passage la souris */
+#actors li a:hover {
+    background-color: #c77;
+    color: white;
+}
+
+#en-images {
+    width: 600px;
+    /* remplacement de margin: 0 auto */
+    margin-inline: auto;
+}
+
+/* ! la div avec l'id pictures en flex signifie qu'elle va tenter de positionner ses enfants (les articles) */
+#pictures {
+    display: flex;
+    flex-direction: column;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    padding: 1.5em 1.5em;
+    margin: 1em auto;
+    border: 1px solid #ccc;
+}
+
+.picture img {
+    /* On précise à l'image qu'en largeur elle ne pourra pas dépasser 100% de son parent */
+    max-width: 100%;
+    /* Sert à maintenir le ratio de l'image, si on ne le précise pas : c'est implicite */
+    /* height: auto; */
+}
+
+#footer {
+    text-align: center;
+    background-color: #eee;
+    /* valeru de padding : haut, droite, bas, gauche */
+    padding: 2em 0 5em 0;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #c77;
+}
